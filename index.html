@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Closure</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="src/site.css">
+    <script src="data/produit.js"></script>
+    <script src="src/catalogueProduit.js"></script>
+    <script>
+        window.addEventListener("load", function() {
+            MonApp.Afficher();
+        })
+
+    </script>
+
+</head>
+
+<body>
+    
+    <nav class="w3-bar w3-border w3-blue ">
+        
+        <h4 class="w3-bar-item ">Bienvennu Vitrine commerciale </h4>
+        <div class="w3-bar-item w3-button w3-right"><i class="material-icons w3-xxlarge ">shopping_cart</i><span  class="w3-badge w3-orange w3-small" id="panier"></span></div>
+    </nav>
+    <div id="message"></div>
+    <div class="w3-margin-top">
+        <select class="w3-select" name="afficherMode" style="width:30%;">
+            <option value="">Choisir mode de affichage </option>
+            <option value="vignette">vignette</option>
+            <option value="liste">Liste</option>
+    
+        </select>
+        <select class="w3-select" name="nbProduitDansPage" id="nbProduitDansPage" style="width:30%;">
+            <option value="">Choisir le numbro de produit </option>
+            <option value=12>12</option>
+            <option value=24>24</option>
+            <option value=36>36</option>
+            <option value="tous">tous</option>
+        </select>
+       
+        <!--<select name="produitCatalogue">
+            <option value="">Choisir la catalogue de produit </option>
+            <option value="b\u00e9b\u00e9">Bébé</option>
+            <option value="\u00e9picerie">Épicerie</option>
+            <option value="quincaillerie">Quincaillerie</option>
+            <option value="informatique">Informatique</option>
+            <option value="beaut\u00e9">Beauté</option>
+            <option value="divers">Divers</option>
+        </select> -->
+        <button class="w3-btn w3-white w3-border w3-border-red w3-round-large" id="changerPageUp" onclick="MonApp.ChangerPage(event)">Incrémentée</button>
+        <button class="w3-btn w3-white w3-border w3-border-green w3-round-large" id="changerPageDown" onclick="MonApp.ChangerPage(event)">Décrémentée</button>
+        <button class="w3-btn w3-black w3-border w3-border-orange w3-round-large" id="envoie" onclick="MonApp.controlAfficher() ">Envoie</button>
+    </div>
+
+     <div id="content"></div>
+    <footer class="w3-bar w3-blue w3-center w3-bottom">zhang lie 2019</footer>
+
+</body>
+
+</html>
